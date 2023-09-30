@@ -11,9 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, useNavigate } from "react-router-dom";
-
-const pages = ["Products", "Pricing", "Blog"];
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -41,6 +39,9 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+            onClick={() => {
+              navigate("/");
+            }}
             variant="h6"
             noWrap
             sx={{
@@ -51,6 +52,7 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              cursor: "pointer",
             }}
           >
             LOGO
@@ -85,14 +87,22 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {token && (
+                <MenuItem
+                  onClick={() => {
+                    navigate("/allbooks");
+                    handleCloseUserMenu();
+                  }}
+                >
+                  <Typography textAlign="center">Books</Typography>
                 </MenuItem>
-              ))}
+              )}
             </Menu>
           </Box>
           <Typography
+            onClick={() => {
+              navigate("/");
+            }}
             variant="h5"
             noWrap
             sx={{
@@ -104,27 +114,30 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              cursor: "pointer",
             }}
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+          {token && (
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  navigate("/allbooks");
+                  handleCloseUserMenu();
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                Books
               </Button>
-            ))}
-          </Box>
+            </Box>
+          )}
 
           {token ? (
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -143,14 +156,10 @@ function Navbar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <Link to="/dashboard">
-                  <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">Dashboard</Typography>
-                  </MenuItem>
-                </Link>
                 <MenuItem
                   onClick={() => {
                     localStorage.removeItem("accessToken");
+                    localStorage.removeItem("user");
                     navigate("/login");
                     handleCloseUserMenu();
                   }}

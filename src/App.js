@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Appbar";
 import ProtectedRoutes from "./Components/ProtectedRoutes";
-import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import AllBooks from "./pages/Dashboard/AllBooks";
+import UpdateBook from "./pages/Dashboard/UpdateBook";
+import PreviewBook from "./pages/Dashboard/PreviewBook";
 
 function App() {
   return (
@@ -15,8 +17,16 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
-          path="/dashboard"
-          element={<ProtectedRoutes Component={<Dashboard />} />}
+          path="/allbooks"
+          element={<ProtectedRoutes Component={<AllBooks />} />}
+        />
+        <Route
+          path="/updatebook"
+          element={<ProtectedRoutes Component={<UpdateBook />} />}
+        />
+        <Route
+          path="/previewbook"
+          element={<ProtectedRoutes Component={<PreviewBook />} />}
         />
       </Routes>
     </>

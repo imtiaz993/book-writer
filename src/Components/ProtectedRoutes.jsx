@@ -9,7 +9,7 @@ const ProtectedRoutes = ({ Component }) => {
     if (!token) {
       navigate("/login");
     }
-  }, [navigate]);
+  }, [navigate, token]);
 
   return <>{token ? Component : <></>}</>;
 };

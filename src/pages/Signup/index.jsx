@@ -21,8 +21,16 @@ const Signup = () => {
       .post(`${process.env.REACT_APP_BASE_URL}register`, userData)
       .then((res) => {
         localStorage.setItem("accessToken", res.data.accessToken);
-        navigate("/dashboard");
-        console.log(res);
+        axios.get(`${process.env.REACT_APP_BASE_URL}users`).then((res) => {
+          localStorage.setItem(
+            "user",
+            JSON.stringify(
+              res.data.find((user) => user.email === userData.email)
+            )
+          );
+
+          navigate("/allbooks");
+        });
       });
   };
 
@@ -30,7 +38,7 @@ const Signup = () => {
     <form onSubmit={handleSubmit}>
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "85vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -60,6 +68,7 @@ const Signup = () => {
         <TextField
           label="Password"
           variant="standard"
+          type="password"
           value={userData.password}
           onChange={(e) => {
             handleChange("password", e.target.value);

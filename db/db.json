@@ -1,39 +1,88 @@
 {
   "users": [
     {
-      "email": "hudot@mailinator.com",
-      "password": "$2a$10$yC3f29t6nvgFbgtfnbY/zOTcLsc6KVf3FnmyLDyB3aRZqJ131GLyW",
-      "name": "Caesar Kaufman",
+      "email": "imtiazhussain@gmail.com",
+      "password": "$2a$10$ZFUwbXPPDdIXG1obj8BAw.c316JjdvMQunjN1yqwIlfKA2adJQIt.",
+      "name": "Imtiaz Hussain",
       "id": 1
     },
     {
-      "email": "cifagalyv@mailinator.com",
-      "password": "$2a$10$nWVcX8P.adGkWkyaIFwcNe.QcwehXYqlNI9Vqz651KWFg8sdtNya2",
-      "name": "Quail Maxwell",
+      "email": "test@gmail.com",
+      "password": "$2a$10$BYSTlp5fp/ymNuXYb7gTreVpAc4Rmg7JI74hJROVGnaRKFBO8sJkm",
+      "name": "Test User",
       "id": 2
     },
     {
-      "email": "nari@mailinator.com",
-      "password": "$2a$10$iSo2Qcp7aJNPJUsfbAFOXu99BiG1oTxO244K/vpPdw5toOPLIncyW",
-      "name": "Nasim Downs",
+      "email": "xyz@gmail.com",
+      "password": "$2a$10$o7siyJ/gCVHqYt01aDnvxe0IVFiRSCvrcCtPjV4gdhkf.90ip15im",
+      "name": "Nell Jefferson",
       "id": 3
-    },
-    {
-      "email": "visecok@mailinator.com",
-      "password": "$2a$10$jPVLXYfIP1WRt63kJvFnCep/UIF8HpjjAEtnm2J8zv3qrHAogdZVy",
-      "name": "Anjolie Farrell",
-      "id": 4
-    },
-    {
-      "email": "mexico@mailinator.com",
-      "password": "$2a$10$iqKb2Eq10vyh1Hi7mwsu6uk9cGw7YZVTbD2LqrCxynZZ37TpKjyRe",
-      "name": "Malachi Kemp",
-      "id": 5
     }
   ],
   "books": [
     {
-      "id": 1
+      "title": "My Biography",
+      "author": {
+        "email": "imtiazh993@gmail.com",
+        "name": "Imtiaz Hussain",
+        "id": 1
+      },
+      "id": "1b458c36-ca26-443a-92e6-04b264719d32",
+      "sections": {
+        "id": "root",
+        "name": "My Biography",
+        "children": [
+          {
+            "id": "bb8eeae3-c434-4bee-927c-5a7ff8e30b38",
+            "name": "Chapter 1: Introduction",
+            "children": [
+              {
+                "id": "4fee17a8-6464-431c-9fca-531929c7090c",
+                "name": "i. Birth Place",
+                "desc": "`<p><span style=\"font-size: 30px;\"><strong>Birtplace:</strong></span><br><br>Imtiaz Born in Sadiqabad, A region in Punjab province of Pakistan.</p>\n`"
+              },
+              {
+                "id": "a49999a3-e998-4f6e-a620-3834e84fe59a",
+                "name": "ii. Family Background"
+              }
+            ],
+            "`<p><span style=\"font-size: 30px;\"><strong>Introduction:<br></strong></span><br><span style=\"font-size: 16px;\">Imtiaz Hussain is a web developer.</span></p>\n`": "`<p><span style=\"font-size: 30px;\"><strong>Introduction:<br></strong></span><br><span style=\"font-size: 16px;\">Imtiaz Hussain is a web developer.</span></p>\n`",
+            "desc": "`<p><span style=\"font-size: 30px;\"><strong>Introduction:<br></strong></span><br><span style=\"font-size: 16px;\">Imtiaz Hussain is a web developer.</span></p>\n`"
+          },
+          {
+            "id": "28faf491-a8a9-41df-bdee-f7e53d43ab82",
+            "name": "Chapter 2: Education",
+            "children": [
+              {
+                "id": "e57d2334-50eb-460e-b2c9-e9b010fa9119",
+                "name": "i. Primary",
+                "children": [
+                  {
+                    "id": "9b0a4553-dad5-4518-8320-5f7516dc78af",
+                    "name": "a. School"
+                  },
+                  {
+                    "id": "455fa082-9752-4954-a856-86858ef02fa6",
+                    "name": "b. Tuition"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "8e43e1c6-4c46-4256-a753-de13226c99e8",
+            "name": "Chapter 3: Career"
+          }
+        ]
+      },
+      "description": "`<p><span style=\"font-size: 30px;\"><strong>Introduction:<br></strong></span><br><span style=\"font-size: 16px;\">Imtiaz Hussain is a web developer.</span></p>\n`",
+      "collaborators": [
+        {
+          "email": "test@gmail.com",
+          "name": "Test User",
+          "id": 2
+        }
+      ]
     }
   ]
 }
