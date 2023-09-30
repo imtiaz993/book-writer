@@ -47,13 +47,25 @@ export default function ManageCollaborators({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let updatedBook = {
-      ...book,
-      collaborators: [...book.collaborators, ...newCollaborator],
-    };
-    newCollaborator.map((item) =>
-      setUser(user.filter((userAdded) => userAdded.id !== item.id))
+    let updatedBook;
+    if (book.collaborators) {
+      updatedBook = {
+        ...book,
+        collaborators: [...book.collaborators, ...newCollaborator],
+      };
+    } else {
+      updatedBook = {
+        ...book,
+        collaborators: [...newCollaborator],
+      };
+    }
+
+    let tempUser = [...user];
+    newCollaborator.map(
+      (item) =>
+        (tempUser = tempUser.filter((userAdded) => userAdded.id !== item.id))
     );
+    setUser(tempUser);
 
     axios
       .put(`${process.env.REACT_APP_BASE_URL}books/${book.id}`, updatedBook)

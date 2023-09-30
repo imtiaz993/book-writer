@@ -24,7 +24,7 @@ const BookCard = ({ book }) => {
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
         {(user.id === book.author.id ||
-          book.collaborators.find((item) => item.id === user.id)) && (
+          book?.collaborators?.find((item) => item.id === user.id)) && (
           <Button
             size="small"
             variant="contained"

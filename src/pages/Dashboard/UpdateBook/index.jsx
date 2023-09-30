@@ -92,6 +92,8 @@ const UpdateBook = () => {
       .put(`${process.env.REACT_APP_BASE_URL}books/${id}`, updatedBook)
       .then((res) => {
         setBook(res.data);
+        setParentSectionId("");
+        setCurrentSectionId("");
         setSectionTitle("");
       });
     setOpenModal(false);

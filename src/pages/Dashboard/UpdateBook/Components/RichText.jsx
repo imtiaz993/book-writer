@@ -76,7 +76,7 @@ const RichText = ({
     } else {
       setEditorState(EditorState.createEmpty());
     }
-  }, [richTextContent]);
+  }, [richTextContent, activeSectionId]);
 
   const onEditorStateChange = (newEditorState) => {
     setEditorState(newEditorState);

@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "email": "imtiazhussain@gmail.com",
-      "password": "$2a$10$ZFUwbXPPDdIXG1obj8BAw.c316JjdvMQunjN1yqwIlfKA2adJQIt.",
+      "email": "imtiazh993@gmail.com",
+      "password": "$2a$10$TgATV4Z5Rlpr/HGP.UUgbO46boOtkFnmp4uNFuyCn/o63Ni32m0DC",
       "name": "Imtiaz Hussain",
       "id": 1
     },
@@ -17,6 +17,54 @@
       "password": "$2a$10$o7siyJ/gCVHqYt01aDnvxe0IVFiRSCvrcCtPjV4gdhkf.90ip15im",
       "name": "Nell Jefferson",
       "id": 3
+    },
+    {
+      "email": "mario@gmail.com",
+      "password": "$2a$10$VUuffh92ttJFsWr5b53K5Os4gzBnbtBRNQMVsJBTu3MlfIvxOMR1C",
+      "name": "Mario",
+      "id": 4
+    },
+    {
+      "email": "huzefa@gmail.com",
+      "password": "$2a$10$uDV9VbatDxILfmG1DEgMrOUByK/MUEHYGkTw4PQndSi1czvbCUBXu",
+      "name": "Huzefa Tariq",
+      "id": 5
+    },
+    {
+      "email": "suwo@mailinator.com",
+      "password": "$2a$10$INDBvxOa0k1adhx9S0kpKO1ggoQVl0w1YF5FXxZwEWjONOJBBOerq",
+      "name": "Savannah Andrews",
+      "id": 6
+    },
+    {
+      "email": "lana@gmail.com",
+      "password": "$2a$10$t8gJS3zW2OfPcIQR0.MiuegcrzwiNFTRKzcNxAntXV3Hdr8U7Q0Ie",
+      "name": "Lana Moran",
+      "id": 7
+    },
+    {
+      "email": "patrick@gmail.com",
+      "password": "$2a$10$3zbImETcSncEq.LH0wa3pu.p8frEfgbYkpJkkPtswYsfGtSJAnMNu",
+      "name": "Patrick Hart",
+      "id": 8
+    },
+    {
+      "email": "justin@gmail.com",
+      "password": "$2a$10$M03mWUzEIbHsaCH.52rzWOOt9tI.j/r2WCpiZ5eyRZ4csEsRZsvvG",
+      "name": "Justin Britt",
+      "id": 9
+    },
+    {
+      "email": "colin@mailinator.com",
+      "password": "$2a$10$41rkCoNnWs2qad1tEAIDleYLM7JhY4keg04gqTJkvNnPbnlSlbMzK",
+      "name": "Colin Webster",
+      "id": 10
+    },
+    {
+      "email": "walker@mailinator.com",
+      "password": "$2a$10$7W9x8TIiw/Ff4hlHtCQJau2sN/P8ANEqZSut6xxw12q/o4hGLODwu",
+      "name": "Walker Morrow",
+      "id": 11
     }
   ],
   "books": [
@@ -81,6 +129,49 @@
           "email": "test@gmail.com",
           "name": "Test User",
           "id": 2
+        }
+      ]
+    },
+    {
+      "title": "Walker Biography",
+      "author": {
+        "email": "walker@mailinator.com",
+        "name": "Walker Morrow",
+        "id": 11
+      },
+      "id": "74f182e4-42de-44bf-913a-a930975082ab",
+      "sections": {
+        "id": "root",
+        "name": "Walker Biography",
+        "children": [
+          {
+            "id": "536d7bfe-b0e6-4d79-84ec-81cc0ca68a1b",
+            "name": "Chapter 1",
+            "children": [
+              {
+                "id": "e1948d08-d6da-4d21-a41b-a800b88285ef",
+                "name": "Intro",
+                "desc": "`<p>Intro<br>Hi This is Walker Biography.</p>\n`"
+              }
+            ],
+            "desc": "`<p><span style=\"font-size: 30px;\">Chapter 1</span></p>\n`"
+          },
+          {
+            "id": "16321d0c-a620-47bb-8c91-f0f80587951b",
+            "name": "Chapter 2"
+          }
+        ]
+      },
+      "collaborators": [
+        {
+          "email": "imtiazh993@gmail.com",
+          "name": "Imtiaz Hussain",
+          "id": 1
+        },
+        {
+          "email": "xyz@gmail.com",
+          "name": "Nell Jefferson",
+          "id": 3
         }
       ]
     }
