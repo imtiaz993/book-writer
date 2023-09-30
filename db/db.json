@@ -1,4 +1,39 @@
 {
-    "users": [],
-    "books":[]
-  }
+  "users": [
+    {
+      "email": "hudot@mailinator.com",
+      "password": "$2a$10$yC3f29t6nvgFbgtfnbY/zOTcLsc6KVf3FnmyLDyB3aRZqJ131GLyW",
+      "name": "Caesar Kaufman",
+      "id": 1
+    },
+    {
+      "email": "cifagalyv@mailinator.com",
+      "password": "$2a$10$nWVcX8P.adGkWkyaIFwcNe.QcwehXYqlNI9Vqz651KWFg8sdtNya2",
+      "name": "Quail Maxwell",
+      "id": 2
+    },
+    {
+      "email": "nari@mailinator.com",
+      "password": "$2a$10$iSo2Qcp7aJNPJUsfbAFOXu99BiG1oTxO244K/vpPdw5toOPLIncyW",
+      "name": "Nasim Downs",
+      "id": 3
+    },
+    {
+      "email": "visecok@mailinator.com",
+      "password": "$2a$10$jPVLXYfIP1WRt63kJvFnCep/UIF8HpjjAEtnm2J8zv3qrHAogdZVy",
+      "name": "Anjolie Farrell",
+      "id": 4
+    },
+    {
+      "email": "mexico@mailinator.com",
+      "password": "$2a$10$iqKb2Eq10vyh1Hi7mwsu6uk9cGw7YZVTbD2LqrCxynZZ37TpKjyRe",
+      "name": "Malachi Kemp",
+      "id": 5
+    }
+  ],
+  "books": [
+    {
+      "id": 1
+    }
+  ]
+}
